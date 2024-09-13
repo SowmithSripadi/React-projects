@@ -70,6 +70,8 @@ function App() {
                 setconvertedAmount(convertedamount)
               }
               amount={convertedamount}
+              amountDisable={true}
+              cursor="cursor-not-allowed"
             />
           </div>
           <button

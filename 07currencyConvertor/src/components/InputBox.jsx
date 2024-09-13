@@ -12,6 +12,7 @@ function InputBox({
   onAmountChange,
   onCurrencyChange,
   selectLabel = "",
+  cursor,
 }) {
   const amountInputId = useId();
   return (
@@ -25,7 +26,7 @@ function InputBox({
         </label>
         <input
           type="number"
-          className="w-full  mb-2 mt-1.5 py-1.5 max-w-40 bg-gray-100 rounded-lg pl-2"
+          className={`w-full  mb-2 mt-1.5 py-1.5 max-w-40 bg-gray-100 rounded-lg pl-2 ${cursor}`}
           value={amount}
           disabled={amountDisable}
           placeholder="Amount"
@@ -38,7 +39,7 @@ function InputBox({
       <div className="w-1/2 flex justify-end flex-wrap text-right">
         <p className="w-full">{selectLabel}</p>
         <select
-          className="px-1.5 bg-gray-200 py-0.5 rounded-lg outline-none cursor-pointer mr-3"
+          className={`px-1.5 bg-gray-200 py-0.5 rounded-lg outline-none cursor-pointer mr-3 ${cursor}`}
           value={selectedCurrency}
           disabled={currencyDisable}
           onChange={(e) => {
