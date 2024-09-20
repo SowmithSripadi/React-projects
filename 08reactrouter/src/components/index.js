@@ -4,3 +4,5 @@ export { default as Footer } from "./Footer/Footer";
 export { default as Header } from "./Header/header";
 export { default as Home } from "./Home/home";
 export { default as Contact } from "./Contact/contact";
+export { default as User } from "./User/user";
+export { default as Github } from "./Github/github";
