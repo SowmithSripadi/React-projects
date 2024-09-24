@@ -46,7 +46,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
+    if (todos.length > 0) {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    } else {
+      localStorage.removeItem("todos"); // Remove todos from localStorage when the array is empty
+    }
   }, [todos]);
 
   return (
